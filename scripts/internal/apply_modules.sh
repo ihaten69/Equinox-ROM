@@ -18,7 +18,7 @@
 
 # shellcheck disable=SC1091,SC2001
 
-set +Ee
+set -Ee
 
 #[
 source "$SRC_DIR/scripts/utils/module_utils.sh"
