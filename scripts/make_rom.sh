@@ -91,6 +91,30 @@ if $BUILD_ROM; then
         bash "$SRC_DIR/scripts/download_fw.sh"
         bash "$SRC_DIR/scripts/extract_fw.sh"
     fi
+    # temp 
+    GET_PROP()
+    {
+        local FILES
+        if [[ "$1" == *".prop" ]]; then
+            FILES="$1"
+            shift
+        else
+            FILES="$(_GET_PROP_FILES_PATH "$1")"
+            if _IS_VALID_PARTITION_NAME "$1"; then
+                shift
+            fi
+        fi
+
+        _CHECK_NON_EMPTY_PARAM "PROP" "$1"
+
+        local PROP="$1"
+    # shellcheck disable=SC2002,SC2046,SC2116
+        cat $(echo "$FILES") 2> /dev/null | sed -n "s/^$PROP=//p" | head -n 1
+    }
+    echo "ONEUI version"
+    OS="$(GET_PROP "system" "ro.build.version.oneui")"
+    #
+    echo "$OS"
     echo -e "- Deleting source super.img..."
     rm -rf $FW_DIR/SM-S938B_EUX/super.img
     rm -rf $FW_DIR/SM-S938B_EUX/system_a.img
