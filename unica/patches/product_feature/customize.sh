@@ -22,7 +22,7 @@ GET_FP_SENSOR_TYPE()
     elif [[ "$1" == *"side"* ]]; then
         echo "side"
     else
-        LOGE "Unsupported type: \"$1\""
+        echo "Unsupported type: \"$1\""
     fi
 }
 # ]
