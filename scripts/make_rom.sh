@@ -98,7 +98,7 @@ if $BUILD_ROM; then
     
     echo -e "Deleting target super.img..."
     rm -rf $FW_DIR/${TARGET_ASSERT_MODEL}_EUX/super.img
-    rm -rf $FW_DIR/${TARGET_ASSERT_MODEL}_EUX/product
+   
     
     echo -e "- Creating work dir..."
     bash "$SRC_DIR/scripts/internal/create_work_dir.sh"
@@ -129,8 +129,6 @@ else
 fi
 
 if $BUILD_ZIP; then
-    echo "- Cleaning up"
-    rm -rf $FW_DIR/${TARGET_ASSERT_MODEL}_EUX/system
     echo "- Building ROM zip..."
     bash "$SRC_DIR/scripts/internal/build_flashable_zip.sh"
     echo ""

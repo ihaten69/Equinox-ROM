@@ -73,6 +73,7 @@ system/app/KidsHome_Installer
 system/app/MAPSAgent
 system/app/MDMApp
 system/app/PlayAutoInstallConfig
+system/app/GameDriver-SM8750
 system/app/Rampart
 system/app/SamsungPassAutofill_v1
 system/app/SamsungTTSVoice_ar_AE_m00_ICLM
@@ -143,6 +144,8 @@ system/priv-app/EnhancedAttestationAgent
 system/priv-app/FBInstaller_NS
 system/priv-app/FBServices
 system/priv-app/FotaAgent
+system/priv-app/SamsungTTSVoice_en_US_l03_ICLM
+system/priv-app/SamsungBilling
 system/priv-app/ImsLogger
 system/priv-app/IpsGeofence
 system/priv-app/OdaService

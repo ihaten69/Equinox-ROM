@@ -22,7 +22,7 @@ ALL=false
 ODIN=false
 FW=false
 APKTOOL=false
-WORK=false
+WORK=true
 KERNEL_TMP=false
 TOOLS=false
 
